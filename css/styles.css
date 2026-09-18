@@ -6,12 +6,34 @@
     padding: 0;
 }
 
+:root {
+    font-size: 100%;
+}
+
 /* Base page text and background colours. */
 body {
     font-family: 'Aptos', 'Segoe UI', sans-serif;
     line-height: 1.6;
     color: #222222;
     background-color: #f4f6f8;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 4vw, 2.75rem);
+}
+
+h2 {
+    font-size: clamp(1.35rem, 2.5vw, 2rem);
+}
+
+h3 {
+    font-size: clamp(1.1rem, 2vw, 1.35rem);
 }
 
 .skip-link {
@@ -162,12 +184,11 @@ iframe:focus-visible {
 
 /* Text sizing inside the homepage hero. */
 .hero-content h1 {
-    font-size: 2.5rem;
     margin-bottom: 1rem;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     margin-bottom: 1.5rem;
 }
 
@@ -199,13 +220,13 @@ iframe:focus-visible {
 main {
     max-width: 1100px;
     margin: 2rem auto;
-    padding: 0 1.5rem;
+    padding: 0 clamp(1rem, 3vw, 1.5rem);
 }
 
 /* Shared white panel style for page sections. */
 section {
     background: #ffffff;
-    padding: 2rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
     margin-bottom: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -405,6 +426,34 @@ footer {
         padding: 0.8rem 0.9rem;
     }
 
+    main {
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .hero-banner {
+        padding: clamp(3rem, 12vw, 5rem) 1rem;
+    }
+
+    .page-header {
+        padding: clamp(2rem, 8vw, 3rem) 1rem;
+    }
+
+    .hero-content p,
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .feature-card {
+        padding: 0.85rem;
+    }
+
+    .services-table th,
+    .services-table td {
+        padding: 0.65rem 0.75rem;
+        font-size: 0.95rem;
+    }
+
     .site-logo {
         height: 38px;
     }
@@ -418,6 +467,6 @@ footer {
     }
 
     .map-container {
-        height: 240px;
+        height: clamp(210px, 60vw, 240px);
     }
 }
