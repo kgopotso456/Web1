@@ -10,20 +10,27 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<hr>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Top Header Navigation Bar (Logo on left, links aligned right) -->
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder (Replace src with your logo path later) -->
-            <img src="images/logo-placeholder.png"
-             alt="Woodwork Logo" class="site-logo" width="100" height="100">
-            <span class="brand-name"><b>Woodwork</b></span>
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <span class="brand-name">Woodwork</span>
         </div>
-<hr>
+
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label class="menu-toggle" for="menu-toggle">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="menu-label">Menu</span>
+        </label>
+
         <!-- Aligned Navigation Menu -->
-        <nav class="nav-links">
+        <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="index.html" class="active" aria-current="page">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
@@ -31,9 +38,9 @@
             </ul>
         </nav>
     </header>
-<hr>
+
     <!-- Main Content Body -->
-    <main>
+    <main id="main-content">
         <!-- Large Banner / Hero Section with background image space -->
         <section class="hero-banner">
             <!-- Main Hero Background Image Placeholder -->
@@ -53,26 +60,21 @@
                 
                 <!-- Card 1: Custom Furniture Placeholder -->
                 <div class="feature-card">
-                    <img src="images/furniture-placeholder.jpg"
-                     alt="Custom Furniture"
-                      class="card-img">
+                    <img src="images/furniture-placeholder.jpg" alt="Custom Furniture" class="card-img">
                     <h3>Bespoke Furniture</h3>
                     <p>Handcrafted tables, chairs, and solid wood frames tailored to your living space.</p>
                 </div>
 
                 <!-- Card 2: Cabinets Placeholder -->
                 <div class="feature-card">
-                    <img src="images/cabinet-placeholder.jpg"
-                     alt="Custom Cabinets"
-                      class="card-img">
+                    <img src="images/cabinet-placeholder.jpg" alt="Custom Cabinets" class="card-img">
                     <h3>Built-in Cabinets</h3>
                     <p>Precision-fitted kitchen cupboards, wardrobes, and modern storage setups.</p>
                 </div>
 
                 <!-- Card 3: Fit-outs Placeholder -->
                 <div class="feature-card">
-                    <img src="images/fitout-placeholder.jpg"
-                     alt="Office Fit-outs" class="card-img">
+                    <img src="images/fitout-placeholder.jpg" alt="Office Fit-outs" class="card-img">
                     <h3>Office & Home Fit-outs</h3>
                     <p>Architectural installations, wall paneling, and custom wooden reception desks.</p>
                 </div>
@@ -86,7 +88,5 @@
         <p>&copy; 2026 Woodwork. All rights reserved.</p>
     </footer>
 
-    <!-- External JavaScript file -->
-    <script src="js/main.js"></script>
 </body>
 </html>

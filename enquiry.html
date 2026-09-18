@@ -10,31 +10,37 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<hr>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- Navigation Header (Matches index.html structure) -->
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png"
-             alt="Woodwork Logo" class="site-logo" width="100" height="100">
-            <span class="brand-name"><b>Woodwork</b></span>
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <span class="brand-name">Woodwork</span>
         </div>
-<hr>
+
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label class="menu-toggle" for="menu-toggle">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="menu-label">Menu</span>
+        </label>
 
         <!-- Aligned Navigation Menu -->
-        <nav class="nav-links">
+        <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
-                <li><a href="enquiry.html" class="active">Enquiry</a></li>
+                <li><a href="enquiry.html" class="active" aria-current="page">Enquiry</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<hr>
+
     <!-- Main Content Container -->
-    <main>
+    <main id="main-content">
         <!-- Page Title Banner -->
         <section class="page-header">
             <h1>Request a Project Quote</h1>
@@ -84,6 +90,7 @@
 
                 <!-- Submit Button -->
                 <button type="submit" class="submit-btn">Submit Enquiry</button>
+                <p class="form-status" id="enquiryStatus" role="status" aria-live="polite" tabindex="-1"></p>
             </form>
         </section>
     </main>
@@ -93,7 +100,5 @@
         <p>&copy; 2026 Woodwork. All rights reserved.</p>
     </footer>
 
-    <!-- External JavaScript file -->
-    <script src="js/main.js"></script>
 </body>
 </html>

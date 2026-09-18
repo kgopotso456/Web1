@@ -6,33 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Woodwork</title>
     
+    <!-- External CSS link for styling -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<hr>
-   
-<!-- Navigation Header (Matches index.html structure) -->
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Navigation Header (Matches index.html structure) -->
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png"
-             alt="Woodwork Logo" class="site-logo" width="100" height="100">
-            <span class="brand-name"><b>Woodwork</b></span>
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <span class="brand-name">Woodwork</span>
         </div>
-<hr>
+
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label class="menu-toggle" for="menu-toggle">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="menu-label">Menu</span>
+        </label>
+
         <!-- Aligned Navigation Menu -->
-        <nav class="nav-links">
+        <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<hr>
+
     <!-- Main Content Container -->
-    <main>
+    <main id="main-content">
         <!-- Page Title Banner -->
         <section class="page-header">
             <h1>About Woodwork</h1>
@@ -46,10 +54,8 @@
                 <p>Woodwork was founded with a passion for high-quality, handcrafted timber design. Starting as a small local workshop, we have grown into a full-service carpentry studio specializing in custom furniture, modern built-in cabinetry, and tailored commercial fit-outs.</p>
             </div>
             <div class="about-image">
-                <!-- Image Placeholder for Craftsman at work -->
-                <img src="images/workshop-placeholder.jpg"
-                 alt="Woodwork Workshop"
-                  class="section-img">
+                <!-- Image Placeholder for Workshop or Craftsman at work -->
+                <img src="images/workshop-placeholder.jpg" alt="Woodwork Workshop" class="section-img">
             </div>
         </section>
 
@@ -72,18 +78,14 @@
                 
                 <!-- Team Member 1 -->
                 <div class="feature-card">
-                    <img src="images/team1-placeholder.jpg"
-                     alt="Master Craftsman"
-                      class="card-img">
+                    <img src="images/team1-placeholder.jpg" alt="Master Craftsman" class="card-img">
                     <h3>Master Carpenter</h3>
                     <p>Leads our joinery, structural assembly, and fine timber finishing with over 10 years of experience.</p>
                 </div>
 
                 <!-- Team Member 2 -->
                 <div class="feature-card">
-                    <img src="images/team2-placeholder.jpg"
-                     alt="Design Specialist"
-                      class="card-img">
+                    <img src="images/team2-placeholder.jpg" alt="Design Specialist" class="card-img">
                     <h3>Design Specialist</h3>
                     <p>Focuses on custom CAD planning, ergonomic layouts, and wood selection to bring client ideas to life.</p>
                 </div>
@@ -96,5 +98,6 @@
     <footer>
         <p>&copy; 2026 Woodwork. All rights reserved.</p>
     </footer>
+
 </body>
 </html>

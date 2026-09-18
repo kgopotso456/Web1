@@ -6,33 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Woodwork</title>
     
+    <!-- External CSS link for styling -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<hr>
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <!-- Navigation Header -->
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png"
-             alt="Woodwork Logo" class="site-logo" width="100" height="100">
-            <span class="brand-name"><b>Woodwork</b></span>
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <span class="brand-name">Woodwork</span>
         </div>
- <hr>       
+
+        <input class="menu-checkbox" type="checkbox" id="menu-toggle" aria-label="Toggle navigation menu">
+        <label class="menu-toggle" for="menu-toggle">
+            <span class="menu-icon" aria-hidden="true"><span></span><span></span><span></span></span>
+            <span class="menu-label">Menu</span>
+        </label>
+
         <!-- Aligned Navigation Menu -->
-        <nav class="nav-links">
+        <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About Us</a></li>
                 <li><a href="services.html">Services</a></li>
                 <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="contact.html" class="active" aria-current="page">Contact Us</a></li>
             </ul>
         </nav>
     </header>
-<hr>
+
     <!-- Main Content Container -->
-    <main>
+    <main id="main-content">
         <!-- Page Title Banner -->
         <section class="page-header">
             <h1>Get in Touch with Us</h1>
@@ -64,19 +72,35 @@
             </div>
         </section>
 
-        <!-- Interactive Google Map Section -->
+        <!-- Interactive Google Maps with a pin for each location -->
         <section class="map-section">
-            <h2>Find Our Workshop on the Map</h2>
-            <div class="map-container" style="overflow: hidden; padding-bottom: 56.25%; position: relative; height: 0;">
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116248.88934424911!2d29.390509618063303!3d-23.90449103525143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ec6d820c749961f%3A0x6b1ed881859c25f7!2sPolokwane!5e0!3m2!1sen!2sza!4v1710000000000!5m2!1sen!2sza" 
-                    width="100%" 
-                    height="450" 
-                    style="border:0; position: absolute; top:0; left:0; width:100%; height:100%;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
+            <h2>Find Our Locations</h2>
+            <div class="map-grid">
+                <div class="map-location">
+                    <h3>Primary Workshop</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps?q=12+Industrial+Park+Road,+Polokwane,+Limpopo&output=embed"
+                            title="Map showing the Woodwork primary workshop in Polokwane"
+                            loading="lazy"
+                            allowfullscreen=""
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="map-location">
+                    <h3>Secondary Showroom</h3>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps?q=88+Main+Retail+Drive,+Johannesburg,+Gauteng&output=embed"
+                            title="Map showing the Woodwork secondary showroom in Johannesburg"
+                            loading="lazy"
+                            allowfullscreen=""
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -111,6 +135,7 @@
 
                 <!-- Submit Button -->
                 <button type="submit" class="submit-btn">Send Message</button>
+                <p class="form-status" id="contactStatus" role="status" aria-live="polite" tabindex="-1"></p>
             </form>
         </section>
     </main>
