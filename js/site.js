@@ -210,8 +210,8 @@ function validateForm(form) {
   }
 
   const successMessages = {
-    enquiry: 'Thank you! Your enquiry has been prepared and will be reviewed by the Woodwork team.',
-    contact: 'Thank you! Your message has been sent and we will respond as soon as possible.'
+    enquiry: 'Thank you! Your enquiry passed validation. This demo does not send messages yet.',
+    contact: 'Thank you! Your message passed validation. This demo does not send messages yet.'
   };
 
   return {

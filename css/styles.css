@@ -265,6 +265,89 @@ h2 {
     margin-bottom: 1rem;
 }
 
+img[data-lightbox] {
+    cursor: zoom-in;
+}
+
+.image-lightbox {
+    width: min(92vw, 900px);
+    max-width: none;
+    max-height: 90vh;
+    margin: auto;
+    padding: 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.image-lightbox::backdrop {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.image-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.image-lightbox-close {
+    display: block;
+    margin: 0 0 0.75rem auto;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #0f172a;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.image-lightbox-caption {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* Search and sorting controls for the service listing. */
+.service-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-items: end;
+    gap: 0 1.25rem;
+}
+
+.service-tools .form-group {
+    margin-bottom: 0.75rem;
+}
+
+#serviceResults {
+    grid-column: 1 / -1;
+    font-weight: 600;
+    color: #475569;
+}
+
+.service-faq details {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.service-faq details:last-child {
+    border-bottom: 0;
+}
+
+.service-faq summary {
+    color: #0f172a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.service-faq details p {
+    padding-top: 0.75rem;
+}
+
 /* Responsive grid for the location maps. */
 .map-grid {
     display: grid;
@@ -291,6 +374,10 @@ h2 {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.map-directions {
+    margin-top: 0.75rem;
 }
 
 /* Allows wide tables to scroll horizontally on small screens. */
@@ -392,6 +479,22 @@ h2 {
     transform: translateY(0);
 }
 
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
+}
+
 /* Form submit button and hover state. */
 .submit-btn {
     background-color: #0284c7;
@@ -421,6 +524,25 @@ footer {
     color: #ffffff;
     padding: 1.5rem;
     margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.social-links a,
+.contact-info-section a {
+    color: inherit;
+    font-weight: 700;
+}
+
+.social-links a:hover,
+.contact-info-section a:hover {
+    text-decoration-thickness: 2px;
 }
 
 /* Phone layout: replaces the desktop links with a collapsible menu. */

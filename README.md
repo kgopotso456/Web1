@@ -66,9 +66,16 @@ The main goals of the website are to:
 - CSS-only mobile navigation menu that works without JavaScript
 - Homepage hero section with clear call-to-action button
 - Service cards for cabinetry, furniture, and commercial fit-outs
+- Searchable and sortable service cards
+- Independent show/hide controls for each service and team card
+- Accessible image lightbox gallery and expandable service FAQs
 - Pricing table showing estimated project ranges
 - Enquiry form with required fields for client and project details
 - Contact page with business information, map embed, and message form
+- Google Maps directions links for both listed locations
+- WhatsApp contact link and social media profile links for X and TikTok
+- Page-specific search and social-sharing metadata, robots.txt, and XML sitemap
+- Lazy-loaded supporting images, reduced-motion support, and embed restrictions
 - Accessible design using skip links, visible focus indicators, and labelled form controls
 - Consistent visual identity and professional layout throughout the project
 
@@ -83,11 +90,9 @@ The main goals of the website are to:
 | Phase 5 | Accessibility and refinement | Improved focus states, labels, and usability across devices |
 | Phase 6 | Final review and documentation | Completed README updates and project summary |
 
-## Part 1 Details
+## Project Functionality
 
-This submission focuses on Part 1 of the website development process. It includes the initial project structure, the essential homepage and supporting pages, the shared styling system, and the overall user experience foundation.
-
-The website currently includes the following pages:
+The website includes the following pages:
 
 - Home
 - About Us
@@ -95,7 +100,7 @@ The website currently includes the following pages:
 - Enquiry
 - Contact
 
-This Part 1 deliverable establishes the core website framework and layout. Part 2 and Part 3 will be completed in future updates and edits as the project continues.
+The enquiry and contact forms currently validate in the browser only. Connect them to a secure form service or server before expecting messages to be delivered.
 
 ## Sitemap
 
@@ -111,6 +116,8 @@ Woodwork Website
 │   └── enquiry.html
 ├── Contact
 │   └── contact.html
+├── robots.txt
+├── sitemap.xml
 └── Shared assets
     ├── css/styles.css
     ├── images/
@@ -126,6 +133,8 @@ Web1/
 ├── services.html
 ├── enquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── styles.css
 ├── images/
@@ -152,6 +161,12 @@ Web1/
 - Added references using Harvard-style citation format
 - Updated documentation for clarity and assessment readiness
 
+### v1.2 - Interactive features and SEO
+- Added image lightboxes, expandable FAQs, and independent card toggles
+- Added service search and alphabetical sorting
+- Added robots.txt, sitemap.xml, and page-specific search metadata
+- Improved image loading behavior, reduced-motion support, and map embed restrictions
+
 ## References
 
 The references below follow the Harvard referencing style commonly used in academic and institutional work.
@@ -169,6 +184,15 @@ No build tools or installation are required. To view the website:
 2. Open index.html in a web browser.
 3. Use the navigation menu to move between the pages.
 
+## Assignment and Publishing Notes
+
+- The project uses `woodwork.co.za` and the provided X, TikTok, and WhatsApp contact details for the assignment demonstration.
+- Workshop addresses, secondary contact information, and business hours are example content, not verified business details.
+- Off-page promotion such as earning backlinks, publishing social posts, and setting up a Google Business Profile must be done through the real external accounts; the website only links to the supplied social profiles.
+- Configure the Content Security Policy as an HTTP response header on the production host; response headers provide stronger protection than a meta policy.
+- Configure production forms with server-side validation, abuse protection, and secure handling of personal information.
+- Backlinks and social promotion require real social profiles and third-party websites; they cannot be created by files in this static project.
+
 ## Author Information
 
 - Name: KGOPOTSO
@@ -177,4 +201,4 @@ No build tools or installation are required. To view the website:
 
 ## Final Note
 
-This README reflects the current project state and acts as the documentation for the first part of the website build. Further project updates, additional features, and continued development will be added in later submissions.
+This README reflects the current project features and publishing requirements.
