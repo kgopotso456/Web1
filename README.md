@@ -1,62 +1,121 @@
 # Woodwork Website
 
-Woodwork is a responsive website for a custom carpentry and woodworking business. The site presents the company's services, explains its approach to craftsmanship, provides estimated pricing information, and gives potential clients ways to request a quote or find the workshop.
+## Project Information
 
-The website is designed to give visitors a clear path from learning about the business to contacting the team about a project. It uses a consistent visual style, shared navigation, responsive layouts, image-based content, and accessible form controls across all pages.
+- Student Name: KGOPOTSO
+- Student ID: ST10527357
+- Course/Group: DIS1 Group 2
+- Project Title: Woodwork Website
+- Project Type: Responsive business website for a custom carpentry and woodworking company
 
-## Main Features
+## Project Overview
 
-- Responsive layout for desktop, tablet, and mobile screen sizes
-- Shared navigation menu across all pages
-- Sticky navigation bar that remains available while scrolling
-- Translucent navigation background with a blur effect when page content moves behind it
-- CSS-only mobile menu that expands and collapses without JavaScript
-- Active-page navigation states to show the visitor's current location
-- Homepage call-to-action linking visitors to the enquiry form
+Woodwork is a responsive multi-page website created for a custom carpentry and woodworking business. The website presents the company’s services, communicates its craftsmanship values, shows estimated pricing information, and provides visitors with clear pathways to request a quote or contact the business.
+
+The aim of the project is to create an engaging and professional online presence that reflects the quality and reliability of the business. The design uses a consistent visual style, shared navigation, accessible form controls, responsive layouts, and image-based branding to deliver a polished user experience across desktop, tablet, and mobile devices.
+
+## Project Visions
+
+### Vision 0.0.1 - Initial concept
+
+- Added the basic website structure using HTML
+- Created the main pages for the project
+- Included key business information and content sections
+
+### Vision 0.0.2 - Improved website version
+
+- Added CSS styling to improve the visual design
+- Created a more professional and modern layout
+- Improved spacing, colours, typography, and page consistency
+- Added responsive behavior for different screen sizes
+- Improved navigation and page usability
+
+### Fixed / Updated(v.0.0.2)
+
+- Fixed layout consistency across all pages
+- Updated the navigation to be cleaner and easier to use
+- Improved mobile responsiveness
+- Improved accessibility with visible focus states and labelled form fields
+- Fixed design issues to make the website look more polished
+- Added a better user experience through updated spacing and section formatting
+
+### What’s New(v.0.0.2)
+
+- Added styling and professional presentation
+- Added responsive layout improvements
+- Added mobile-friendly navigation
+- Added improved content formatting and page structure
+- Added final refinements for a more complete website appearance
+
+## Website Goals and Objectives
+
+The main goals of the website are to:
+
+1. Promote the Woodwork brand and its craftsmanship.
+2. Present the company’s services in a clear and professional layout.
+3. Build trust with potential clients through case-study-style content and project information.
+4. Provide an easy way for customers to submit an enquiry or request a quote.
+5. Ensure the website is responsive, accessible, and easy to navigate on all screen sizes.
+6. Support the user journey from awareness to enquiry and contact.
+
+## Key Features and Functionality
+
+- Responsive website layout for desktop, tablet, and mobile screens
+- Shared navigation across all pages for consistency
+- Sticky header with translucent background and blur effect
+- CSS-only mobile navigation menu that works without JavaScript
+- Homepage hero section with clear call-to-action button
 - Service cards for cabinetry, furniture, and commercial fit-outs
-- Estimated pricing table for common service categories
-- Project enquiry form with required client and project fields
-- Contact page with workshop details, contact information, and embedded maps
-- Skip link and visible keyboard focus states to support keyboard navigation
-- Responsive table container that allows pricing information to scroll horizontally on small screens
+- Pricing table showing estimated project ranges
+- Enquiry form with required fields for client and project details
+- Contact page with business information, map embed, and message form
+- Accessible design using skip links, visible focus indicators, and labelled form controls
+- Consistent visual identity and professional layout throughout the project
 
-## Website Content
+## Timeline and Milestones
 
-### Homepage
+| Phase | Milestone | Description |
+| --- | --- | --- |
+| Phase 1 | Planning and research | Defined the project purpose, target audience, and structure |
+| Phase 2 | Content and layout planning | Created page outline, navigation, and content structure |
+| Phase 3 | Homepage and core pages | Developed the main layout and sections for all key pages |
+| Phase 4 | Styling and responsiveness | Added CSS styling, mobile layout, and interactive menu behaviour |
+| Phase 5 | Accessibility and refinement | Improved focus states, labels, and usability across devices |
+| Phase 6 | Final review and documentation | Completed README updates and project summary |
 
-The homepage introduces the Woodwork brand with a workshop hero area, a description of the business, and featured examples of custom furniture and carpentry work. The main call-to-action directs visitors to the project enquiry page.
+## Part 1 Details
 
-### About Us
+This submission focuses on Part 1 of the website development process. It includes the initial project structure, the essential homepage and supporting pages, the shared styling system, and the overall user experience foundation.
 
-This page explains the history of Woodwork and presents the company's mission and vision. It also introduces the craftspeople involved in design, joinery, structural assembly, and finishing.
+The website currently includes the following pages:
 
-### Services
+- Home
+- About Us
+- Services
+- Enquiry
+- Contact
 
-The services page describes three main service areas: custom cabinetry and shelving, bespoke hardwood furniture, and office or commercial fit-outs. It also includes a pricing guide with example scopes and estimated base rates.
+This Part 1 deliverable establishes the core website framework and layout. Part 2 and Part 3 will be completed in future updates and edits as the project continues.
 
-### Enquiry
+## Sitemap
 
-The enquiry page contains a project quote form. Visitors can provide their name, email address, phone number, preferred service, and project specifications. The form is structured with labels and required fields to make the request clear.
-
-### Contact Us
-
-The contact page provides workshop and showroom information, including addresses, telephone details, email contact, opening hours, and map embeds. It also includes a direct contact form for visitors who want to send a message.
-
-## Pages
-
-- `index.html` - Homepage and featured craftsmanship
-- `about.html` - Company history, mission, vision, and team
-- `services.html` - Carpentry services and estimated pricing
-- `enquiry.html` - Project enquiry form
-- `contact.html` - Workshop locations and contact form
-
-## Technologies Used
-
-- HTML5 for page structure and forms
-- CSS3 for layout, responsive design, sticky navigation, transitions, and visual styling
-- Local image assets in `images/`, including the logo, workshop images, service images, and team images
-
-The navigation menu uses CSS only. The current website does not require JavaScript for its navigation or core page interactions.
+```text
+Woodwork Website
+├── Home
+│   └── index.html
+├── About Us
+│   └── about.html
+├── Services
+│   └── services.html
+├── Enquiry
+│   └── enquiry.html
+├── Contact
+│   └── contact.html
+└── Shared assets
+    ├── css/styles.css
+    ├── images/
+    └── js/
+```
 
 ## Project Structure
 
@@ -77,40 +136,45 @@ Web1/
 └── js/
 ```
 
-All pages share `css/styles.css`, which contains the global reset, colors, typography, navigation, cards, forms, tables, footer, and responsive breakpoints. The `js/` folder is currently empty because the site functionality is implemented with HTML and CSS.
+## Changelog
 
-## Responsive Navigation
+### v1.0 - Initial website build
+- Created the homepage and supporting pages
+- Added the shared navigation and sticky header
+- Implemented the responsive layout and mobile menu
+- Added service information, pricing guide, enquiry form, and contact details
+- Included basic accessibility features and focus styling
 
-On larger screens, the navigation links appear in a horizontal row beside the Woodwork logo. On screens below the mobile breakpoint, the links are hidden behind a Menu control. The control uses a checkbox and label so it can work without a script. When opened, the navigation expands inside the sticky header and pushes the page content down instead of covering it.
+### v1.1 - README update
+- Added complete project overview and objectives
+- Included goals, features, milestones, and sitemap
+- Added changelog section for version tracking
+- Added references using Harvard-style citation format
+- Updated documentation for clarity and assessment readiness
 
-The sticky header uses a semi-transparent white background, a subtle shadow, and a backdrop blur. This allows the page content to remain slightly visible while keeping the navigation text readable.
+## References
 
-## Accessibility Considerations
+The references below follow the Harvard referencing style commonly used in academic and institutional work.
 
-- Each page defines a viewport for responsive scaling.
-- Images include alternative text describing their content.
-- Navigation is labelled as the main navigation area.
-- The current page is identified with an active link and `aria-current`.
-- Form fields use visible labels and required validation where appropriate.
-- A skip link allows keyboard users to move directly to the main content.
-- Focus indicators are provided for links, controls, and form fields.
+- MDN Web Docs, 2024. HTML: HyperText Markup Language. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML [Accessed 14 October 2026].
+- MDN Web Docs, 2024. CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 14 October 2026].
+- World Wide Web Consortium (W3C), 2024. Web Content Accessibility Guidelines (WCAG) 2.2. Available at: https://www.w3.org/TR/WCAG22/ [Accessed 14 October 2026].
+- World Wide Web Consortium (W3C), 2024. HTML5. Available at: https://html.spec.whatwg.org/multipage/ [Accessed 14 October 2026].
 
-## Running the Website
+## How to Run the Website
 
-No build tools or package installation are required. To view the site:
+No build tools or installation are required. To view the website:
 
 1. Open the project folder in a code editor or file browser.
-2. Open `index.html` in a web browser.
-3. Use the navigation menu to visit the other pages.
+2. Open index.html in a web browser.
+3. Use the navigation menu to move between the pages.
 
-For the most reliable local preview, the files can also be opened through a simple local web server. This is useful for testing relative links, embedded maps, and browser behavior consistently.
-
-## How to Run
-
-Open `index.html` in a web browser. The other pages can be opened directly from the navigation menu.
-
-## Author
+## Author Information
 
 - Name: KGOPOTSO
 - Student ID: ST10527357
-- DIS1 GROUP 2
+- Group: DIS1 GROUP 2
+
+## Final Note
+
+This README reflects the current project state and acts as the documentation for the first part of the website build. Further project updates, additional features, and continued development will be added in later submissions.

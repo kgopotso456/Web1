@@ -4,10 +4,21 @@
     <!-- Metadata configuration for responsive web design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Woodwork services, including custom cabinetry, bespoke hardwood furniture, and commercial fit-outs tailored to your space.">
+    <meta name="keywords" content="cabinetry services, custom furniture, office fit-outs, woodworking contractor, bespoke timber design">
+    <meta name="author" content="Woodwork">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Services | Woodwork Custom Carpentry">
+    <meta property="og:description" content="Bespoke cabinetry, hardwood furniture, and commercial fit-outs built around your needs and space.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/service-cabinetry.jpg">
+    <meta name="theme-color" content="#0f172a">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-src https://www.google.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <title>Services | Woodwork</title>
     
     <!-- External CSS link for styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
 
@@ -17,7 +28,7 @@
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo" width="160" height="45" decoding="async">
             <span class="brand-name">Woodwork</span>
         </div>
 
@@ -49,29 +60,69 @@
 
         <!-- Services Detailed Cards -->
         <section class="services-list">
+            <div class="service-tools" role="search" aria-label="Search and sort services">
+                <div class="form-group">
+                    <label for="serviceSearch">Search services:</label>
+                    <input type="search" id="serviceSearch" autocomplete="off" placeholder="Search cabinetry, furniture, fit-outs...">
+                </div>
+                <div class="form-group">
+                    <label for="serviceSort">Sort services:</label>
+                    <select id="serviceSort">
+                        <option value="default">Featured order</option>
+                        <option value="az">Name (A to Z)</option>
+                        <option value="za">Name (Z to A)</option>
+                    </select>
+                </div>
+                <p id="serviceResults" role="status" aria-live="polite"></p>
+            </div>
             <div class="card-grid">
 
                 <!-- Service 1 -->
                 <div class="feature-card">
-                    <img src="images/service-cabinetry.jpg" alt="Custom Cabinetry" class="card-img">
-                    <h3>1. Custom Cabinetry & Shelving</h3>
-                    <p>Built-to-measure kitchen cupboards, bathroom vanities, bedroom wardrobes, and custom wall units crafted for seamless storage.</p>
+                    <img src="images/service-cabinetry.jpg" alt="Custom Cabinetry" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="service-card-detail-1" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="service-card-detail-1">
+                        <h3>1. Custom Cabinetry & Shelving</h3>
+                        <p>Built-to-measure kitchen cupboards, bathroom vanities, bedroom wardrobes, and custom wall units crafted for seamless storage.</p>
+                    </div>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="feature-card">
-                    <img src="images/service-furniture.jpg" alt="Hardwood Furniture" class="card-img">
-                    <h3>2. Bespoke Hardwood Furniture</h3>
-                    <p>Handcrafted solid wood dining tables, coffee tables, bed frames, and statement furniture built using premium timber.</p>
+                    <img src="images/service-furniture.jpg" alt="Hardwood Furniture" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="service-card-detail-2" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="service-card-detail-2">
+                        <h3>2. Bespoke Hardwood Furniture</h3>
+                        <p>Handcrafted solid wood dining tables, coffee tables, bed frames, and statement furniture built using premium timber.</p>
+                    </div>
                 </div>
 
                 <!-- Service 3 -->
                 <div class="feature-card">
-                    <img src="images/service-fitouts.jpg" alt="Commercial Fit-outs" class="card-img">
-                    <h3>3. Office & Commercial Fit-outs</h3>
-                    <p>Professional timber installations for offices and retail stores, including custom reception desks, wall cladding, and boardrooms.</p>
+                    <img src="images/service-fitouts.jpg" alt="Commercial Fit-outs" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="service-card-detail-3" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="service-card-detail-3">
+                        <h3>3. Office & Commercial Fit-outs</h3>
+                        <p>Professional timber installations for offices and retail stores, including custom reception desks, wall cladding, and boardrooms.</p>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section class="service-faq reveal-on-scroll">
+            <h2>Frequently Asked Questions</h2>
+            <details>
+                <summary>Can you build to custom dimensions?</summary>
+                <p>Yes. We plan each project around your space, measurements, material preferences, and intended use.</p>
+            </details>
+            <details>
+                <summary>How do I receive an accurate quote?</summary>
+                <p>Submit an enquiry with your project details, approximate dimensions, and preferred materials. We can then discuss the scope and estimate.</p>
+            </details>
+            <details>
+                <summary>Do you install projects on site?</summary>
+                <p>On-site installation is available for cabinetry and fit-out projects. Installation requirements are included in the project estimate.</p>
+            </details>
         </section>
 
         <!-- Service Pricing & Scope Table -->
@@ -117,7 +168,7 @@
 
     <!-- Site Footer -->
     <footer>
-        <p>&copy; 2026 Woodwork. All rights reserved.</p>
+        <p>&copy; <span data-current-year></span> Woodwork. All rights reserved.</p>
     </footer>
 
 </body>

@@ -4,10 +4,21 @@
     <!-- Metadata configuration for responsive web design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Woodwork creates bespoke carpentry, custom cabinetry, furniture, and commercial fit-outs for homes and businesses.">
+    <meta name="keywords" content="custom carpentry, bespoke furniture, cabinetry, commercial fit-outs, Woodwork South Africa">
+    <meta name="author" content="Woodwork">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Woodwork | Premium Custom Carpentry">
+    <meta property="og:description" content="Custom cabinetry, bespoke furniture, and tailored fit-outs crafted for modern homes and commercial spaces.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/workshop-placeholder.jpg">
+    <meta name="theme-color" content="#0f172a">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-src https://www.google.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <title>Woodwork | Premium Custom Carpentry</title>
     
     <!-- External CSS link for styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
 
@@ -17,7 +28,7 @@
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder (Replace src with your logo path later) -->
-            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo" width="160" height="45" decoding="async">
             <span class="brand-name">Woodwork</span>
         </div>
 
@@ -54,38 +65,61 @@
         </section>
 
         <!-- Featured Section with Big Image Slots -->
-        <section class="featured-work">
+        <section class="featured-work reveal-on-scroll">
             <h2>Our Custom Craftsmanship</h2>
             <div class="card-grid">
                 
                 <!-- Card 1: Custom Furniture Placeholder -->
                 <div class="feature-card">
-                    <img src="images/furniture-placeholder.jpg" alt="Custom Furniture" class="card-img">
-                    <h3>Bespoke Furniture</h3>
-                    <p>Handcrafted tables, chairs, and solid wood frames tailored to your living space.</p>
+                    <img src="images/furniture-placeholder.jpg" alt="Custom Furniture" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="home-card-detail-1" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="home-card-detail-1">
+                        <h3>Bespoke Furniture</h3>
+                        <p>Handcrafted tables, chairs, and solid wood frames tailored to your living space.</p>
+                    </div>
                 </div>
 
                 <!-- Card 2: Cabinets Placeholder -->
                 <div class="feature-card">
-                    <img src="images/cabinet-placeholder.jpg" alt="Custom Cabinets" class="card-img">
-                    <h3>Built-in Cabinets</h3>
-                    <p>Precision-fitted kitchen cupboards, wardrobes, and modern storage setups.</p>
+                    <img src="images/cabinet-placeholder.jpg" alt="Custom Cabinets" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="home-card-detail-2" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="home-card-detail-2">
+                        <h3>Built-in Cabinets</h3>
+                        <p>Precision-fitted kitchen cupboards, wardrobes, and modern storage setups.</p>
+                    </div>
                 </div>
 
                 <!-- Card 3: Fit-outs Placeholder -->
                 <div class="feature-card">
-                    <img src="images/fitout-placeholder.jpg" alt="Office Fit-outs" class="card-img">
-                    <h3>Office & Home Fit-outs</h3>
-                    <p>Architectural installations, wall paneling, and custom wooden reception desks.</p>
+                    <img src="images/fitout-placeholder.jpg" alt="Office Fit-outs" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="home-card-detail-3" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="home-card-detail-3">
+                        <h3>Office & Home Fit-outs</h3>
+                        <p>Architectural installations, wall paneling, and custom wooden reception desks.</p>
+                    </div>
                 </div>
 
+            </div>
+        </section>
+
+        <section class="video-section reveal-on-scroll">
+            <h2>See Our Craft in Action</h2>
+            <div class="video-wrapper">
+                <iframe
+                    src="https://www.youtube.com/embed/7yk76jA3OK0?si=JkQw5mC8fDVA7Qkx"
+                    title="Woodworking craftsmanship showcase"
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
             </div>
         </section>
     </main>
 
     <!-- Site Footer -->
     <footer>
-        <p>&copy; 2026 Woodwork. All rights reserved.</p>
+        <p>&copy; <span data-current-year></span> Woodwork. All rights reserved.</p>
     </footer>
 
 </body>

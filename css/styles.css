@@ -348,8 +348,48 @@ h2 {
 .form-status {
     min-height: 1.6rem;
     margin-top: 1rem;
-    color: #166534;
     font-weight: 700;
+    color: #166534;
+}
+
+.form-status.success {
+    color: #166534;
+}
+
+.form-status.error {
+    color: #b91c1c;
+}
+
+.video-section {
+    margin-top: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 1.25rem auto 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* Form submit button and hover state. */

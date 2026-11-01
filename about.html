@@ -4,10 +4,21 @@
     <!-- Metadata configuration for responsive web design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Woodwork, our workshop heritage, skilled team, and commitment to handcrafted timber design.">
+    <meta name="keywords" content="about Woodwork, carpentry studio, custom joinery, woodworking team, workshop heritage">
+    <meta name="author" content="Woodwork">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Woodwork | Custom Carpentry Studio">
+    <meta property="og:description" content="A skilled woodworking team delivering handcrafted cabinetry, furniture, and fit-outs with precision and care.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/workshop-placeholder.jpg">
+    <meta name="theme-color" content="#0f172a">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-src https://www.google.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <title>About Us | Woodwork</title>
     
     <!-- External CSS link for styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
 
@@ -17,7 +28,7 @@
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo" width="160" height="45" decoding="async">
             <span class="brand-name">Woodwork</span>
         </div>
 
@@ -48,14 +59,14 @@
         </section>
 
         <!-- Company Overview & Image Section -->
-        <section class="about-overview">
+        <section class="about-overview reveal-on-scroll">
             <div class="about-text">
                 <h2>Our History</h2>
                 <p>Woodwork was founded with a passion for high-quality, handcrafted timber design. Starting as a small local workshop, we have grown into a full-service carpentry studio specializing in custom furniture, modern built-in cabinetry, and tailored commercial fit-outs.</p>
             </div>
             <div class="about-image">
                 <!-- Image Placeholder for Workshop or Craftsman at work -->
-                <img src="images/workshop-placeholder.jpg" alt="Woodwork Workshop" class="section-img">
+                <img src="images/workshop-placeholder.jpg" alt="Woodwork Workshop" class="section-img" loading="lazy" decoding="async" data-lightbox>
             </div>
         </section>
 
@@ -72,22 +83,28 @@
         </section>
 
         <!-- Team Overview Section -->
-        <section class="team-section">
+        <section class="team-section reveal-on-scroll">
             <h2>Meet the Craftspeople</h2>
             <div class="card-grid">
                 
                 <!-- Team Member 1 -->
                 <div class="feature-card">
-                    <img src="images/team1-placeholder.jpg" alt="Master Craftsman" class="card-img">
-                    <h3>Master Carpenter</h3>
-                    <p>Leads our joinery, structural assembly, and fine timber finishing with over 10 years of experience.</p>
+                    <img src="images/team1-placeholder.jpg" alt="Master Craftsman" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="team-card-detail-1" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="team-card-detail-1">
+                        <h3>Master Carpenter</h3>
+                        <p>Leads our joinery, structural assembly, and fine timber finishing with over 10 years of experience.</p>
+                    </div>
                 </div>
 
                 <!-- Team Member 2 -->
                 <div class="feature-card">
-                    <img src="images/team2-placeholder.jpg" alt="Design Specialist" class="card-img">
-                    <h3>Design Specialist</h3>
-                    <p>Focuses on custom CAD planning, ergonomic layouts, and wood selection to bring client ideas to life.</p>
+                    <img src="images/team2-placeholder.jpg" alt="Design Specialist" class="card-img" loading="lazy" decoding="async" data-lightbox>
+                    <button class="toggle-content-btn" type="button" aria-controls="team-card-detail-2" aria-expanded="true" hidden>Hide details</button>
+                    <div class="card-details" id="team-card-detail-2">
+                        <h3>Design Specialist</h3>
+                        <p>Focuses on custom CAD planning, ergonomic layouts, and wood selection to bring client ideas to life.</p>
+                    </div>
                 </div>
 
             </div>
@@ -96,7 +113,7 @@
 
     <!-- Site Footer -->
     <footer>
-        <p>&copy; 2026 Woodwork. All rights reserved.</p>
+        <p>&copy; <span data-current-year></span> Woodwork. All rights reserved.</p>
     </footer>
 
 </body>

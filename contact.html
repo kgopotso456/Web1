@@ -4,10 +4,21 @@
     <!-- Metadata configuration for responsive web design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Woodwork to discuss bespoke cabinetry, custom furniture, and commercial timber fit-outs.">
+    <meta name="keywords" content="contact Woodwork, workshop locations, cabinetry quote, timber fit-out enquiry">
+    <meta name="author" content="Woodwork">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Contact Woodwork | Workshop & Showroom">
+    <meta property="og:description" content="Find our workshop and showroom locations, ask a question, or send us a direct message.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/workshop-placeholder.jpg">
+    <meta name="theme-color" content="#0f172a">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; frame-src https://www.google.com https://www.youtube.com; object-src 'none'; base-uri 'self'; form-action 'self'">
     <title>Contact Us | Woodwork</title>
     
     <!-- External CSS link for styling -->
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/site.js" defer></script>
 </head>
 <body>
 
@@ -17,7 +28,7 @@
     <header class="navbar">
         <div class="logo-container">
             <!-- Logo Image Placeholder -->
-            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo">
+            <img src="images/logo-placeholder.png" alt="Woodwork Logo" class="site-logo" width="160" height="45" decoding="async">
             <span class="brand-name">Woodwork</span>
         </div>
 
@@ -84,7 +95,8 @@
                             title="Map showing the Woodwork primary workshop in Polokwane"
                             loading="lazy"
                             allowfullscreen=""
-                            referrerpolicy="no-referrer-when-downgrade">
+                            referrerpolicy="no-referrer-when-downgrade"
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
                         </iframe>
                     </div>
                 </div>
@@ -97,7 +109,8 @@
                             title="Map showing the Woodwork secondary showroom in Johannesburg"
                             loading="lazy"
                             allowfullscreen=""
-                            referrerpolicy="no-referrer-when-downgrade">
+                            referrerpolicy="no-referrer-when-downgrade"
+                            sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
                         </iframe>
                     </div>
                 </div>
@@ -107,12 +120,12 @@
         <!-- Direct Contact Form -->
         <section class="form-container">
             <h2>Send Us a Direct Message</h2>
-            <form id="contactForm">
+            <form id="contactForm" data-form="contact">
                 
                 <!-- Name Field -->
                 <div class="form-group">
                     <label for="contactName">Your Name:</label>
-                    <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required>
+                    <input type="text" id="contactName" name="contactName" placeholder="Enter your name" required minlength="2">
                 </div>
 
                 <!-- Email Field -->
@@ -142,7 +155,7 @@
 
     <!-- Site Footer -->
     <footer>
-        <p>&copy; 2026 Woodwork. All rights reserved.</p>
+        <p>&copy; <span data-current-year></span> Woodwork. All rights reserved.</p>
     </footer>
 
 </body>
