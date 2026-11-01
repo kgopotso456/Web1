@@ -74,6 +74,7 @@ The main goals of the website are to:
 - Contact page with business information, map embed, and message form
 - Google Maps directions links for both listed locations
 - WhatsApp contact link and social media profile links for X and TikTok
+- Icon-only social buttons with a green hover-fill animation; X, TikTok, and WhatsApp link to the supplied profiles, and YouTube is shown as an unlinked placeholder
 - Page-specific search and social-sharing metadata, robots.txt, and XML sitemap
 - Lazy-loaded supporting images, reduced-motion support, and embed restrictions
 - Accessible design using skip links, visible focus indicators, and labelled form controls
@@ -101,6 +102,17 @@ The website includes the following pages:
 - Contact
 
 The enquiry and contact forms currently validate in the browser only. Connect them to a secure form service or server before expecting messages to be delivered.
+
+## Social Media Links and Icon Animation
+
+Each page footer includes a consistent social media navigation area. The X, TikTok, and WhatsApp icons link to the profiles supplied for this assignment and open in a new tab. The YouTube icon is an unlinked placeholder because a profile URL has not been provided; it is labelled as unavailable and is not presented as a working link.
+
+The icons use inline SVG artwork and are styled in `css/styles.css`. On hover, a green background sweeps up behind each icon and the icon color changes. Keyboard users get the same animation and color change when a link receives focus. The animation transitions are disabled when the visitor's device requests reduced motion.
+
+Implementation references:
+
+- Shared footer markup: `index.html`, `about.html`, `services.html`, `enquiry.html`, and `contact.html`
+- Social icon layout, hover/focus animation, colors, and reduced-motion behavior: `css/styles.css` (`.social-links`, `.social-icon-link`, `.social-icon-placeholder`, and the `prefers-reduced-motion` media query)
 
 ## Sitemap
 
@@ -167,12 +179,19 @@ Web1/
 - Added robots.txt, sitemap.xml, and page-specific search metadata
 - Improved image loading behavior, reduced-motion support, and map embed restrictions
 
+### v1.3 - Social media links and animation documentation
+- Documented the footer social links and the destinations supplied for the assignment
+- Explained that YouTube is a placeholder until a profile link is provided
+- Added implementation references for the green hover/focus animation and reduced-motion behavior
+
 ## References
 
 The references below follow the Harvard referencing style commonly used in academic and institutional work.
 
 - MDN Web Docs, 2024. HTML: HyperText Markup Language. Available at: https://developer.mozilla.org/en-US/docs/Web/HTML [Accessed 14 October 2026].
 - MDN Web Docs, 2024. CSS: Cascading Style Sheets. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS [Accessed 14 October 2026].
+- MDN Web Docs, 2024. CSS transitions. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transitions [Accessed 1 November 2026].
+- MDN Web Docs, 2024. `prefers-reduced-motion`. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion [Accessed 1 November 2026].
 - World Wide Web Consortium (W3C), 2024. Web Content Accessibility Guidelines (WCAG) 2.2. Available at: https://www.w3.org/TR/WCAG22/ [Accessed 14 October 2026].
 - World Wide Web Consortium (W3C), 2024. HTML5. Available at: https://html.spec.whatwg.org/multipage/ [Accessed 14 October 2026].
 

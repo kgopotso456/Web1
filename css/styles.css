@@ -530,7 +530,8 @@ footer {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    align-items: center;
+    gap: 1.1rem;
     margin-top: 0.75rem;
 }
 
@@ -540,9 +541,73 @@ footer {
     font-weight: 700;
 }
 
+.social-icon-link,
+.social-icon-placeholder {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    color: #ffffff;
+    isolation: isolate;
+}
+
+.social-icon-link {
+    text-decoration: none;
+}
+
+.social-icon-placeholder {
+    cursor: default;
+}
+
+.social-icon-link::before,
+.social-icon-placeholder::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #20c96b;
+    content: "";
+    transform: translateY(101%);
+    transition: transform 0.3s ease;
+}
+
+.social-icon-link:hover::before,
+.social-icon-link:focus-visible::before,
+.social-icon-placeholder:hover::before {
+    transform: translateY(0);
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus-visible,
+.social-icon-placeholder:hover {
+    color: #0f172a;
+}
+
+.social-icon {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+    transition: color 0.3s ease;
+}
+
 .social-links a:hover,
 .contact-info-section a:hover {
     text-decoration-thickness: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-icon-link::before,
+    .social-icon-placeholder::before,
+    .social-icon {
+        transition: none;
+    }
 }
 
 /* Phone layout: replaces the desktop links with a collapsible menu. */
