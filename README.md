@@ -109,7 +109,7 @@ The enquiry and contact forms validate in the browser and submit asynchronously 
 ### Implemented in the website
 
 - JavaScript interactions include the responsive navigation, reveal-on-scroll animation, service search and sorting, show/hide card details, image lightbox, and expandable service FAQs.
-- Both forms have labelled fields, browser-required attributes, JavaScript client-side validation, HTML `POST` actions, and asynchronous submission through FormSubmit. Contact includes a message-type selection; enquiry displays an indicative price response based on the published guide.
+- Both forms have labelled fields, browser-required attributes, JavaScript client-side validation, HTML `POST` actions, and asynchronous submission through FormSubmit. Contact includes a message-type selection; enquiry collects the project town or suburb and displays an indicative price response based on the published guide.
 - Contact and enquiry forms use a responsive two-column desktop layout with full-width message fields and a single-column mobile layout.
 - The enquiry form validates phone format and project detail length; both forms set input length limits, show field-level invalid states, and display distinct pending, success, and error messages for asynchronous submission.
 - The contact page embeds Google Maps for the example locations and provides directions links.
@@ -278,6 +278,10 @@ The site uses `images/logo-optimized.png` and `images/fitout-optimized.jpg` for 
 ### v1.14 - Responsive form styling
 - Restyled the contact and project enquiry forms with a clean, spacious layout inspired by the supplied reference
 - Added a two-column desktop layout, full-width message fields, and a single-column mobile layout without changing form behavior
+
+### v1.15 - Enquiry location field
+- Added a required town or suburb field to the project enquiry form
+- Updated its placeholder to “Enter your town or suburb”
 
 ## References
 
