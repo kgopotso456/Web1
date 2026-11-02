@@ -195,7 +195,7 @@ iframe:focus-visible {
 /* Main call-to-action link and hover state. */
 .cta-button {
     display: inline-block;
-    background-color: #0284c7;
+    background-color: #0369a1;
     color: #ffffff;
     padding: 0.8rem 1.8rem;
     text-decoration: none;
@@ -205,7 +205,7 @@ iframe:focus-visible {
 }
 
 .cta-button:hover {
-    background-color: #0369a1;
+    background-color: #075985;
 }
 
 /* Header banner used on the inner pages. */
@@ -243,7 +243,7 @@ h2 {
 /* Responsive grid used for service, team, and content cards. */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -263,6 +263,13 @@ h2 {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 1rem;
+}
+
+.section-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
 }
 
 img[data-lightbox] {
@@ -432,6 +439,12 @@ img[data-lightbox] {
     box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18);
 }
 
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #b91c1c;
+}
+
 .form-status {
     min-height: 1.6rem;
     margin-top: 1rem;
@@ -445,6 +458,10 @@ img[data-lightbox] {
 
 .form-status.error {
     color: #b91c1c;
+}
+
+.form-status.pending {
+    color: #475569;
 }
 
 .video-section {
@@ -497,7 +514,7 @@ img[data-lightbox] {
 
 /* Form submit button and hover state. */
 .submit-btn {
-    background-color: #0284c7;
+    background-color: #0369a1;
     color: #ffffff;
     border: none;
     padding: 0.8rem 2rem;
@@ -507,7 +524,7 @@ img[data-lightbox] {
 }
 
 .submit-btn:hover {
-    background-color: #0369a1;
+    background-color: #075985;
 }
 
 .cta-button:focus-visible,
