@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://woodwork.co.za/sitemap.xml
+Sitemap: https://woodwork-42.netlify.app/sitemap.xml
