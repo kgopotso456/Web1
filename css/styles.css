@@ -195,7 +195,7 @@ iframe:focus-visible {
 /* Main call-to-action link and hover state. */
 .cta-button {
     display: inline-block;
-    background-color: #0284c7;
+    background-color: #0369a1;
     color: #ffffff;
     padding: 0.8rem 1.8rem;
     text-decoration: none;
@@ -205,7 +205,7 @@ iframe:focus-visible {
 }
 
 .cta-button:hover {
-    background-color: #0369a1;
+    background-color: #075985;
 }
 
 /* Header banner used on the inner pages. */
@@ -243,7 +243,7 @@ h2 {
 /* Responsive grid used for service, team, and content cards. */
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 1.5rem;
     margin-top: 1rem;
 }
@@ -263,6 +263,96 @@ h2 {
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 1rem;
+}
+
+.section-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+img[data-lightbox] {
+    cursor: zoom-in;
+}
+
+.image-lightbox {
+    width: min(92vw, 900px);
+    max-width: none;
+    max-height: 90vh;
+    margin: auto;
+    padding: 1rem;
+    border: 0;
+    border-radius: 8px;
+    background: #0f172a;
+    color: #ffffff;
+}
+
+.image-lightbox::backdrop {
+    background: rgba(15, 23, 42, 0.85);
+}
+
+.image-lightbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.image-lightbox-close {
+    display: block;
+    margin: 0 0 0.75rem auto;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #0f172a;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.image-lightbox-caption {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+/* Search and sorting controls for the service listing. */
+.service-tools {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    align-items: end;
+    gap: 0 1.25rem;
+}
+
+.service-tools .form-group {
+    margin-bottom: 0.75rem;
+}
+
+#serviceResults {
+    grid-column: 1 / -1;
+    font-weight: 600;
+    color: #475569;
+}
+
+.service-faq details {
+    padding: 1rem 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.service-faq details:last-child {
+    border-bottom: 0;
+}
+
+.service-faq summary {
+    color: #0f172a;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.service-faq details p {
+    padding-top: 0.75rem;
 }
 
 /* Responsive grid for the location maps. */
@@ -291,6 +381,10 @@ h2 {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+.map-directions {
+    margin-top: 0.75rem;
 }
 
 /* Allows wide tables to scroll horizontally on small screens. */
@@ -345,16 +439,82 @@ h2 {
     box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.18);
 }
 
+.form-group input[aria-invalid="true"],
+.form-group select[aria-invalid="true"],
+.form-group textarea[aria-invalid="true"] {
+    border-color: #b91c1c;
+}
+
 .form-status {
     min-height: 1.6rem;
     margin-top: 1rem;
-    color: #166534;
     font-weight: 700;
+    color: #166534;
+}
+
+.form-status.success {
+    color: #166534;
+}
+
+.form-status.error {
+    color: #b91c1c;
+}
+
+.form-status.pending {
+    color: #475569;
+}
+
+.video-section {
+    margin-top: 2rem;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 1.25rem auto 0;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 /* Form submit button and hover state. */
 .submit-btn {
-    background-color: #0284c7;
+    background-color: #0369a1;
     color: #ffffff;
     border: none;
     padding: 0.8rem 2rem;
@@ -364,7 +524,7 @@ h2 {
 }
 
 .submit-btn:hover {
-    background-color: #0369a1;
+    background-color: #075985;
 }
 
 .cta-button:focus-visible,
@@ -381,6 +541,90 @@ footer {
     color: #ffffff;
     padding: 1.5rem;
     margin-top: 3rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.1rem;
+    margin-top: 0.75rem;
+}
+
+.social-links a,
+.contact-info-section a {
+    color: inherit;
+    font-weight: 700;
+}
+
+.social-icon-link,
+.social-icon-placeholder {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    color: #ffffff;
+    isolation: isolate;
+}
+
+.social-icon-link {
+    text-decoration: none;
+}
+
+.social-icon-placeholder {
+    cursor: default;
+}
+
+.social-icon-link::before,
+.social-icon-placeholder::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: #20c96b;
+    content: "";
+    transform: translateY(101%);
+    transition: transform 0.3s ease;
+}
+
+.social-icon-link:hover::before,
+.social-icon-link:focus-visible::before,
+.social-icon-placeholder:hover::before {
+    transform: translateY(0);
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus-visible,
+.social-icon-placeholder:hover {
+    color: #0f172a;
+}
+
+.social-icon {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    fill: currentColor;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover,
+.contact-info-section a:hover {
+    text-decoration-thickness: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .social-icon-link::before,
+    .social-icon-placeholder::before,
+    .social-icon {
+        transition: none;
+    }
 }
 
 /* Phone layout: replaces the desktop links with a collapsible menu. */

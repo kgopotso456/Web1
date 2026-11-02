@@ -1,0 +1,23 @@
+[
+  {
+    "id": "cabinetry",
+    "name": "Custom Cabinetry & Shelving",
+    "image": "images/service-cabinetry.jpg",
+    "imageAlt": "Custom cabinetry",
+    "description": "Built-to-measure kitchen cupboards, bathroom vanities, bedroom wardrobes, and custom wall units crafted for seamless storage."
+  },
+  {
+    "id": "furniture",
+    "name": "Bespoke Hardwood Furniture",
+    "image": "images/service-furniture.jpg",
+    "imageAlt": "Handcrafted hardwood furniture",
+    "description": "Handcrafted solid wood dining tables, coffee tables, bed frames, and statement furniture built using premium timber."
+  },
+  {
+    "id": "fitouts",
+    "name": "Office & Commercial Fit-outs",
+    "image": "images/service-fitouts.jpg",
+    "imageAlt": "Commercial timber fit-out",
+    "description": "Professional timber installations for offices and retail stores, including custom reception desks, wall cladding, and boardrooms."
+  }
+]
