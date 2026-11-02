@@ -68,7 +68,7 @@
         <!-- Enquiry Form Section -->
         <section class="form-container">
             <h2>Project Enquiry Form</h2>
-            <form id="enquiryForm" data-form="enquiry" method="POST" action="https://formsubmit.co/mahlokwanekgopotso05@gmail.com">
+            <form id="enquiryForm" class="form-grid" data-form="enquiry" method="POST" action="https://formsubmit.co/mahlokwanekgopotso05@gmail.com">
                 <input type="hidden" name="_subject" value="New Woodwork project enquiry">
                 
                 <!-- Full Name Field -->
@@ -101,8 +101,13 @@
                     </select>
                 </div>
 
-                <!-- Project Details Textarea -->
                 <div class="form-group">
+                    <label for="projectArea">Town or suburb:</label>
+                    <input type="text" id="projectArea" name="projectArea" placeholder="Enter your town or suburb" autocomplete="address-level2" required minlength="2" maxlength="100">
+                </div>
+
+                <!-- Project Details Textarea -->
+                <div class="form-group form-group-wide">
                     <label for="details">Project Specifications & Details:</label>
                     <textarea id="details" name="details" rows="5" placeholder="Describe wood preferences, dimensions, or specific design ideas..." required minlength="20" maxlength="2000"></textarea>
                 </div>
@@ -111,7 +116,7 @@
                 <button type="submit" class="submit-btn">Submit Enquiry</button>
                 <p class="form-status" id="enquiryStatus" role="status" aria-live="polite" tabindex="-1"></p>
                 <p class="form-estimate" id="enquiryEstimate" role="status" aria-live="polite" hidden></p>
-                <p>Your enquiry details will be sent to Woodwork through the FormSubmit service.</p>
+                <p class="form-note">Your enquiry details will be sent to Woodwork through the FormSubmit service.</p>
             </form>
         </section>
     </main>
