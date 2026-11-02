@@ -125,7 +125,7 @@ The enquiry and contact forms validate in the browser and submit asynchronously 
 
 - **Form activation and live delivery test:** FormSubmit must verify the recipient address on its first live submission. Mocked browser tests passed, but no real send has been made. Confirm the activation email arrives and test both forms after the site is hosted.
 - **Confirm business content:** Replace placeholder logo and images and verify the business name, addresses, contact details, hours, service descriptions, and pricing before presenting this as a real business website.
-- **Confirm domain and social accounts:** The project currently uses `woodwork.co.za` in canonical URLs, metadata, `robots.txt`, and the sitemap. Replace it if that is not the final domain, and verify all profile URLs.
+- **Confirm domain and social accounts:** The project uses `https://woodwork-42.netlify.app` in canonical URLs, metadata, `robots.txt`, and the sitemap. Verify that this is the final published domain and confirm all profile URLs.
 - **Production security and privacy:** Configure the Content Security Policy as a host response header. Review FormSubmit's privacy terms and ensure users are informed that submissions go to the provider; configure any available provider anti-spam protections.
 - **Live PageSpeed Insights:** The Lighthouse results below are from a local preview, not the live hosting. Deploy the site and run PageSpeed Insights on the real public URL for production network, server, and caching results.
 - **Remaining testing and publishing:** Run a full HTML validator and manual keyboard/screen-reader review. Then push the final changes to the remote repository, submit the repository link, and deploy the site.
@@ -308,7 +308,7 @@ No build tools or installation are required. To view the website:
 
 ## Assignment and Publishing Notes
 
-- The project uses `woodwork.co.za` and the provided X, TikTok, WhatsApp, and YouTube profile details for the assignment demonstration; verify these before production use.
+- The project uses `woodwork-42.netlify.app` and the provided X, TikTok, WhatsApp, and YouTube profile details for the assignment demonstration; verify these before production use.
 - Workshop addresses, secondary contact information, and business hours are example content, not verified business details.
 - Off-page promotion such as earning backlinks, publishing social posts, and setting up a Google Business Profile must be done through the real external accounts; the website only links to the supplied social profiles.
 - Configure the Content Security Policy as an HTTP response header on the production host; response headers provide stronger protection than a meta policy.
